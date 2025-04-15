@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Letreiro.css';
 
 function Letreiro() {
-  const textoCompleto = "Venha estudar na Fatec!";
+  const textoCompleto = "Conheça a Fatec!";
   const [texto, setTexto] = useState('');
   const [indice, setIndice] = useState(0);
   const [apagando, setApagando] = useState(false);
