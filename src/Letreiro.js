@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './Letreiro.css';
 
 function Letreiro() {
   const textoCompleto = "Conheça a Fatec!";
