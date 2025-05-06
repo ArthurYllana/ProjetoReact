@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Contador.css";
+import './Contador.css';
 
 function ControleDeValores() {
     const [valorHomens, setValorHomens] = useState(0);
