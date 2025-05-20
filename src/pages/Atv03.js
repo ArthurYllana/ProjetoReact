@@ -1,5 +1,3 @@
-import {BtnVoltar,BtnProximo} from "../components/Button";
-
 import TableOfContents from "../components/TableOfContents";
 import Avatar from "../components/Avatar";
 import Gallery from "../components/Profile";
@@ -17,13 +15,6 @@ export default function Atv03() {
   return (
     <>
         <h1>Atividade 3</h1>
-        <section style={{
-          margin: '20px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gridTemplateRows: '0.3fr 0.5fr 0.5fr',
-          gap: '20px'
-        }}>
           <TableOfContents />
           <Card>
               <div>
@@ -46,10 +37,6 @@ export default function Atv03() {
           <TeaSet />
           <List />
           <SpicedChaiRecipe drinkers={4} />
-        </section>
-        <br/>
-        <Link to="/"><BtnVoltar /></Link>
-        <Link to="/Atv04"><BtnProximo /></Link>
     </>
   );
 }
