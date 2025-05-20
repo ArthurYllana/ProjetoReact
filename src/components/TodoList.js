@@ -1,5 +1,4 @@
-import Avatar from "./Avatar";
-import './TodoList.css';
+import Avatar from "./Avatar.js";
 
 const person = {
     name: 'Gregorio Y. Zara',

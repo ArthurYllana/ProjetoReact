@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Fazemos a importação de funções expecificas do react-router-dom
 
-import Home from "./Home";
-import Atv01 from "./Atv01";
-import Atv02 from "./Atv02";
-import Atv03 from "./Atv03";
+import Home from "./pages/Home";
+import Atv01 from "./pages/Atv01";
+import Atv02 from "./pages/Atv02";
+import Atv03 from "./pages/Atv03";
 
 export default function MinhasRotas(){
     return(

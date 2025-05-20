@@ -1,5 +1,3 @@
-import './PackingList.css'
-
 function Item({ name, isPacked}) {
     let itemContent = name;
     if (isPacked) {

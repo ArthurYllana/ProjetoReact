@@ -1,11 +1,13 @@
-export default function Avatar(){
-    const avatar = "./imagens/Gregorio_Y_Zara (1).jpg";
-    const description = "Gregori Y. Zara"
-    return(
+export default function Avatar({ person, size }) {
+    const avatar = `https://i.imgur.com/${person.imageId}.jpg`;
+    const description = person.name;
+    return (
         <img
             className="avatar"
-            src = {avatar} 
-            alt = {description}
+            src={avatar}
+            alt={description}
+            width={size}
+            height={size}
         />
     );
 }
