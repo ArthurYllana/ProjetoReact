@@ -1,10 +1,33 @@
+import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
+
+import Button from "../components/atv04/Button"
+import Toolbar from "../components/atv04/Toolbar";
+import Signup from "../components/atv04/Signup";
+import Gallery from "../components/atv04/Gallery";
+import Gallery2 from "../components/atv04/Gallery2";
+import Clock, { useTime } from "../components/atv04/Clock";
+import Form from "../components/atv04/Form";
+import Counter from "../components/atv04/Counter";
+
 import {Link} from "react-router-dom";
 
 export default function Atv04() {
-  return (
-    <>
-        <h1>Atividade 04</h1>
-        <Link to ="/"> Voltar </Link>
-    </>
-  );
+    const time = useTime();
+    return (
+        <>
+            <h1>Atividade 4</h1>
+            <Button />
+            <Toolbar 
+                onPlayMovie={() => alert("Playing...")}
+                onUploadImage={() => alert("Uploading...")}
+            />
+            <Signup />
+            <Gallery />
+            <Gallery2 />
+            <Clock time={time.toLocaleTimeString()}/>
+            <Form />
+            <Counter />
+            <Link to="/" />
+        </>
+    );
 }

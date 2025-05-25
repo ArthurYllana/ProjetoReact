@@ -1,12 +1,14 @@
+import Contador from "../components/atv02/Contador";
+import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
 import {Link} from "react-router-dom";
-import Contador from "../components/Contador";
 
 export default function Atv02() {
   return (
     <>
-        <h1>Atividade 02</h1>
+        <h1>Atividade 2</h1>
         <Contador />
-        <Link to ="/"> Voltar </Link>
+        <br></br>
+        <Link to="/" />
     </>
   );
 }
