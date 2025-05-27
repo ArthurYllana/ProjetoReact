@@ -1,5 +1,3 @@
-import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
-
 import Button from "../components/atv04/Button"
 import Toolbar from "../components/atv04/Toolbar";
 import Signup from "../components/atv04/Signup";
