@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { sculptureList } from '../../data/data';
+import './Gallery.css'
 
 export default function Gallery() {
     // let index = 0;
