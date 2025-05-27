@@ -1,5 +1,6 @@
 import Relogio from "../components/atv01/Relogio";
 import Letreiro from "../components/atv01/Letreiro";
+import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
 import {Link} from "react-router-dom";
 
 export default function Atv01() {
@@ -9,7 +10,8 @@ export default function Atv01() {
         <Relogio />
         <Letreiro />
         <br></br>
-        <Link to="/" />
+        <Link to="/"><BtnVoltar /></Link>
+        <Link to="/Atv02"><BtnProximo /></Link>
     </>
   );
 }

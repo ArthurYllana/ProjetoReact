@@ -12,6 +12,7 @@ import CounterList from "../components/atv04/CounterList";
 import List3 from "../components/atv04/List3";
 import List4 from "../components/atv04/List4";
 import BucketList from "../components/atv04/BucketList";
+import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
 
 import {Link} from "react-router-dom";
 
@@ -44,7 +45,8 @@ export default function Atv04() {
                 <ShapeEditor />
                 <MovingDot />
             </section>
-            <Link to="/" />
+            <Link to="/"><BtnVoltar /></Link>
+        <Link to="/Atv05"><BtnProximo /></Link>
         </>
     );
 }

@@ -6,6 +6,7 @@ import PackingList from "../components/atv03/PackingList";
 import List from "../components/atv03/List";
 import SpicedChaiRecipe from "../components/atv03/Recipe";
 import TeaSet from "../components/atv03/TeaSet";
+import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
 
 import {Link} from "react-router-dom";
 
@@ -42,7 +43,8 @@ export default function Atv03() {
           <SpicedChaiRecipe drinkers={4} />
         </section>
         <br/>
-        <Link to="/" />
+        <Link to="/"><BtnVoltar /></Link>
+        <Link to="/Atv04"><BtnProximo /></Link>
 
     </>
   );
