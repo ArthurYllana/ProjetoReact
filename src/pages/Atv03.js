@@ -1,9 +1,6 @@
-import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
-
 import TableOfContents from "../components/atv03/TableOfContents";
 import Avatar from "../components/atv03/Avatar";
-import Gallery from "../components/atv03/Gallery";
-import Card from "../components/atv03/Card";
+import Profile from "../components/atv03/Profile";
 import TodoList from "../components/atv03/TodoList";
 import PackingList from "../components/atv03/PackingList";
 import List from "../components/atv03/List";
@@ -24,8 +21,6 @@ export default function Atv03() {
           gap: '20px'
         }}>
           <TableOfContents />
-          <Card>
-              {/*Card recebe children logo é possível passar vários elementos para ele*/}
               <div>
                 <h1>Katherine Johnson</h1>
                 <p>
@@ -39,8 +34,7 @@ export default function Atv03() {
                       imageId:'0S9jJQe'
                   }}
               />
-          </Card>
-          <Gallery />
+          <Profile />
           <TodoList />
           <PackingList />
           <TeaSet />
