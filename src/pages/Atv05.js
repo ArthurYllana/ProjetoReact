@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
+import { useState } from "react"; 
 import {BtnVoltar,BtnProximo} from "../components/ButtonNav";
 import Accordion from "../components/atv05/Accordion";
-import ContactList from "../components/atv05/ContactList";
+import Messenger from "../components/atv05/App"; 
 import FormQuiz from "../components/atv05/FormQuiz";
 import FormTicket from "../components/atv05/FormTicket";
 
@@ -10,7 +11,7 @@ export default function Atv05() {
     <>
         <h1>Atividade 5</h1>
         <Accordion />
-        <ContactList />
+        <Messenger /> 
         <FormQuiz />
         <FormTicket />
         

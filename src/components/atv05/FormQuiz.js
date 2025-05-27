@@ -1,69 +1,71 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+ 
 export default function FormQuiz() {
     const [answer, setAnswer] = useState('');
-    const [erro, setErro] = useState(null);
-    const [status, setStatus] = useState('typing');
-
-    if (status === 'success') {
+    const [error, setError] = useState(null); // erro retornado do try/catch
+    const [status, setStatus] = useState('typing'); // typing, success, submitting
+ 
+    if (status === 'sucess') {
         return <h1>That's right!</h1>
     }
-    
+ 
     async function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault(); // impede do formulário resetar ao envio
         setStatus('submitting');
-        try{
+        try {
             await submitForm(answer);
-            setStatus('sucess')
-        } catch(err) {
+            setStatus('success');
+        }
+        catch (err) {
             setStatus('typing');
-            setErro(err);
+            setError(err);
         }
     }
-
-    function handleTextareaChange(e){
-        setAnswer(e.target.value);
+ 
+    function handleTextareaChange(e) {
+        setAnswer(e.target.value); // pega o input inserido pelo usuário
     }
-
-    return(
-        <>
-            <h2>City quiz</h2>
+ 
+    return (
+        <section className="form-quiz">
+            <h2>City Quiz</h2>
             <p>
                 In which city is there a billboard that turns air into drinkable water?
             </p>
-            <form onSubmit ={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <textarea
                     value={answer}
                     onChange={handleTextareaChange}
-                    disabled={status === 'bubmitting'}
+                    placeholder='Type your answer...'
+                    disabled={status === 'submitting'} // true ou false
                 />
                 <br />
-                <button disabled={
-                    answer.length === 0 ||
-                    status === 'submitting'
+                <button disabled={ // true ou false
+                    answer.length === 0 || // se não houver resposta
+                    status === 'submitting' // ou estiver enviando
                 }>
                     Submit
                 </button>
-                {error != null &&
-                    <p className="Erro">
-                        {error.messagem}
+                {error !== null && // se houver erro, mostrar
+                    <p className="error">
+                        {error.message}
                     </p>}
             </form>
-        </>
+        </section>
     );
 }
-
-function submitForm(answer){
-    //Pretend it's hitting the network.
+ 
+function submitForm(answer) {
+    // promise -> usado em funções assíncronas, "promete um resultado"
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             let shouldError = answer.toLowerCase() !== 'lima'
-            if (shouldError){
-                reject(new Error('Try again!'));
-            } 
-            else{
-                resolve();
+            if (shouldError) {
+                reject(new Error('Try again!')); // se falha ou erro
             }
-        },1500);
+            else {
+                resolve(); // se sucesso
+            }
+        }, 1500);
     });
 }

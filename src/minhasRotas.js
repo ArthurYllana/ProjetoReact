@@ -6,6 +6,7 @@ import Atv01 from "./pages/Atv01";
 import Atv02 from "./pages/Atv02";
 import Atv03 from "./pages/Atv03";
 import Atv04 from "./pages/Atv04";
+import Atv05 from "./pages/Atv05";
 
 export default function MinhasRotas(){
     return(
