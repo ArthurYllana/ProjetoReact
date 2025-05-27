@@ -24,4 +24,46 @@ export default function FormQuiz() {
     function handleTextareaChange(e){
         setAnswer(e.target.value);
     }
+
+    return(
+        <>
+            <h2>City quiz</h2>
+            <p>
+                In which city is there a billboard that turns air into drinkable water?
+            </p>
+            <form onSubmit ={handleSubmit}>
+                <textarea
+                    value={answer}
+                    onChange={handleTextareaChange}
+                    disabled={status === 'bubmitting'}
+                />
+                <br />
+                <button disabled={
+                    answer.length === 0 ||
+                    status === 'submitting'
+                }>
+                    Submit
+                </button>
+                {error != null &&
+                    <p className="Erro">
+                        {error.messagem}
+                    </p>}
+            </form>
+        </>
+    );
+}
+
+function submitForm(answer){
+    //Pretend it's hitting the network.
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let shouldError = answer.toLowerCase() !== 'lima'
+            if (shouldError){
+                reject(new Error('Try again!'));
+            } 
+            else{
+                resolve();
+            }
+        },1500);
+    });
 }
